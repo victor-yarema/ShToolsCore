@@ -10,7 +10,7 @@ __LoadFuncs__() {
 		>&2 echo "Missing parameter(s)."
 		return 1
 	}
-	local Funcs=$( . "${ShToolsDir}/__GenFuncs.sh" "${Dir}" "${FuncsNamesSuffix}" ) &&
+	local Funcs="$( . "${ShToolsDir}/__GenFuncs.sh" "${Dir}" "${FuncsNamesSuffix}" )" &&
 	eval "${Funcs}" ||
 	{
 		>&2 echo "Error loading functions."
